@@ -2,6 +2,6 @@
   become: true
   tasks:
     - name: download docker image using dockerhub
-      command: docker pull venkadeshw55/ansible:latest
+      command: docker pull venkadeshw55/ansible:0.0.1
     - name: run a containerd
       command: docker run -d -p 2000:80 --name ansible venkadeshw55/ansible:0.0.1
