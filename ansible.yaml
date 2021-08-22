@@ -1,0 +1,7 @@
+- hosts: all
+  become: true
+  tasks:
+    - name: download docker image using dockerhub
+      command: docker pull venkadeshw55/ansible:latest
+    - name: run a containerd
+      command: docker run -d -p 2000:80 --name ansible venkadeshw55/ansible:latest
